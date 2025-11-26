@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.line {
+  background-color: black;
+  width: 40px;
+  height: 2px;
+}
+
+/* #region main  */
+
+main {
+  width: 100%;
+  position: relative;
+  margin-top: 70px;
+}
+
+main video {
+  width: 100%;
+}
+
+main .title {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  gap: 20px;
+  top: 0;
+}
+
+main .title h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 130px;
+  letter-spacing: 20px;
+}
+
+main .title h3 {
+  font-weight: 30;
+  letter-spacing: 3px;
+}
+
+main .title p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 22px;
+}
+
+main .title button {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 8px 26px;
+}
+
+main .title button:hover {
+  background-color: white;
+  color: black;
+}
+/* #endregion main  */
+
+/* #region section1 */
+
+.section1 {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.section1 .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  min-width: 400px;
+  max-width: 800px;
+  flex-grow: 1;
+  padding: 30px 40px 30px 320px;
+}
+
+.section1 .left h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 45px;
+}
+
+.section1 .left p {
+  font-family: "Courier New", monospace;
+}
+
+.section1 .right {
+  width: 50%;
+  height: 75vh;
+  background-image: url("https://static.wixstatic.com/media/ea71bb_e7959a5be116482b9727a9be900d2d35~mv2_d_5454_3840_s_4_2.jpg/v1/fill/w_1710,h_1432,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/ea71bb_e7959a5be116482b9727a9be900d2d35~mv2_d_5454_3840_s_4_2.jpg");
+  background-position: center;
+  background-size: cover;
+  min-width: 400px;
+  flex-grow: 1;
+}
+
+.section1 .left .btns {
+  display: flex;
+  gap: 10px;
+}
+
+.section1 .left .btns .btn1 {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 8px 20px;
+}
+
+.section1 .left .btns .btn1:hover {
+  background-color: white;
+  color: black;
+}
+
+.section1 .left .btns .btn2 {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 8px 20px;
+}
+
+.section1 .left .btns .btn2:hover {
+  background-color: black;
+  color: white;
+}
+/* #endregion section1 */
+
+/* #region section2 */
+
+.section2 {
+  background-image: url("../images/lightblue.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section2 .help {
+  width: 55%;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0px;
+}
+
+.section2 .help .boxes {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.section2 .help .boxes .box1,
+.section2 .help .boxes .box2,
+.section2 .help .boxes .box3 {
+  border: 6px solid black;
+  width: 30%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 0px;
+  min-width: 250px;
+  flex-grow: 1;
+}
+
+.section2 .help h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 45px;
+}
+
+.section2 .help .boxes .line1 {
+  border: 1px solid rgb(54, 53, 53);
+  width: 200px;
+}
+
+.section2 .help .boxes button {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.762);
+  font-size: 16px;
+  padding: 8px 20px;
+  margin-top: auto;
+}
+
+.section2 .help .boxes button:hover {
+  text-decoration: underline;
+}
+
+.section2 .help .boxes h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.section2 .help .boxes p {
+  color: rgb(84, 83, 83);
+}
+
+.section2 .help > button {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.762);
+  font-size: 16px;
+  padding: 12px 38px;
+  display: flex;
+  align-self: center;
+  margin-top: 70px;
+}
+
+.section2 .help > button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* #endregion section2 */
+
+@media screen and (max-width: 900px) {
+  main .title h1 {
+    font-size: 70px;
+  }
+  .section1 .left {
+    padding: 10px 40px 10px 40px;
+    font-size: 15px;
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .title {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main .title h1 {
+    font-size: 40px;
+  }
+  main .title h3 {
+    font-size: 10px;
+  }
+  main .title p {
+    font-size: 8px;
+  }
+  main .title button {
+    padding: 4px 20px;
+    font-size: 10px;
+  }
+  .section1 .right {
+    background-position: left;
+  }
+  .section1 .left .btns .btn1 {
+    font-size: 12px;
+    padding: 4px 15px;
+  }
+  .section1 .left .btns .btn2 {
+    font-size: 12px;
+    padding: 4px 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main .title h1 {
+    font-size: 30px;
+  }
+  .section1 .right {
+    min-width: 400px;
+  }
+  .section2 .help {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  main video {
+    min-width: 400px;
+  }
+  main .title {
+    min-width: 400px;
+  }
+  .section2 {
+    min-width: 400px;
+  }
+  .section1 .left {
+    width: 400px;
+    padding: 10px 30px 10px 30px;
+  }
+}

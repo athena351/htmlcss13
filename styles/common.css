@@ -1,0 +1,289 @@
+* {
+  margin: o;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.line {
+  background-color: black;
+  width: 40px;
+  height: 2px;
+}
+
+/* #region header */
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 120px;
+  z-index: 1000;
+}
+
+header .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+header nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+header .name h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+header .name p {
+  font-family: "Courier New", monospace;
+  letter-spacing: 1px;
+}
+
+header nav ul a {
+  font-family: "Courier New", monospace;
+  color: black;
+}
+
+header nav ul li:nth-child(8) a {
+  color: rgb(8, 106, 83);
+}
+
+header nav ul a:hover {
+  color: rgb(15, 158, 124);
+}
+
+header nav ul li:nth-child(8) a:hover {
+  color: rgb(15, 158, 124);
+}
+
+header label .burger .line2 {
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+header label .burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+header #check {
+  display: none;
+}
+
+#check:checked + label .burger .line2:nth-child(2) {
+  display: none;
+}
+
+#check:checked + label .burger .line2:nth-child(1) {
+  transform: rotate(45deg) translate(5px);
+}
+
+#check:checked + label .burger .line2:nth-child(3) {
+  transform: rotate(-45deg) translate(5px);
+}
+
+#check:checked ~ nav {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  background-color: rgb(22, 180, 186);
+}
+
+#check:checked ~ nav ul {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 70px;
+}
+
+/* #endregion header  */
+
+/* #region footer  */
+
+footer {
+  width: 100%;
+  background-color: rgb(42, 180, 182);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+.input {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+footer .contact h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+footer .contact p {
+  color: rgb(49, 48, 48);
+}
+
+footer .contact p a {
+  text-decoration: underline;
+}
+
+footer .contact .social {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
+footer .input .name {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+footer .input .name .firstname {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 50px;
+  flex-grow: 1;
+}
+
+footer .input .name .lastname {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 50px;
+  flex-grow: 1;
+}
+
+footer .input input {
+  background-color: inherit;
+  border: 2px solid black;
+  padding: 13px 53px;
+  outline: none;
+}
+
+footer .input input:nth-child(7) {
+  padding: 40px;
+}
+
+footer .input label {
+  color: rgb(49, 48, 48);
+  font-size: 18px;
+}
+
+footer button {
+  background-color: black;
+  color: rgb(190, 186, 186);
+  font-size: 16px;
+  padding: 10px 60px;
+  align-self: flex-end;
+}
+
+footer button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* #endregion footer  */
+
+/* #region chatbutton */
+
+.chatbutton {
+  background-color: black;
+  color: rgb(224, 223, 223);
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  padding: 13px 40px;
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  z-index: 100;
+}
+/* #endregion chatbutton */
+
+@media screen and (max-width: 1100px) {
+  header nav {
+    display: none;
+  }
+
+  header label .burger {
+    display: flex;
+  }
+
+  header {
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .name h3 {
+    font-size: 15px;
+  }
+
+  header .name p {
+    font-size: 12px;
+  }
+  .chatbutton {
+    bottom: 5px;
+    right: 15px;
+    padding: 10px 25px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .name h3 {
+    font-size: 10px;
+  }
+  header .name p {
+    font-size: 9px;
+  }
+  footer {
+    padding: 10px;
+    min-width: 400px;
+  }
+}
