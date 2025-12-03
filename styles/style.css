@@ -34,6 +34,7 @@ main .title {
   padding-top: 100px;
   gap: 20px;
   top: 0;
+  animation: title 2s forwards;
 }
 
 main .title h1 {
@@ -86,6 +87,7 @@ main .title button:hover {
   max-width: 800px;
   flex-grow: 1;
   padding: 30px 40px 30px 320px;
+  animation: left 2s forwards;
 }
 
 .section1 .left h2 {
@@ -105,6 +107,7 @@ main .title button:hover {
   background-size: cover;
   min-width: 400px;
   flex-grow: 1;
+  animation: right 2s forwards;
 }
 
 .section1 .left .btns {
@@ -170,6 +173,18 @@ main .title button:hover {
   flex-wrap: wrap;
 }
 
+.section2 .help .boxes .box1 {
+  animation: boxes 2s;
+}
+
+.section2 .help .boxes .box2 {
+  animation: boxes 3s;
+}
+
+.section2 .help .boxes .box3 {
+  animation: boxes 4s;
+}
+
 .section2 .help .boxes .box1,
 .section2 .help .boxes .box2,
 .section2 .help .boxes .box3 {
@@ -190,11 +205,13 @@ main .title button:hover {
 .section2 .help h2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 45px;
+  animation: help 2s;
 }
 
 .section2 .help .boxes .line1 {
   border: 1px solid rgb(54, 53, 53);
   width: 200px;
+  animation: text 2s;
 }
 
 .section2 .help .boxes button {
@@ -203,6 +220,7 @@ main .title button:hover {
   font-size: 16px;
   padding: 8px 20px;
   margin-top: auto;
+  animation: text 1.5s;
 }
 
 .section2 .help .boxes button:hover {
@@ -213,10 +231,12 @@ main .title button:hover {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 25px;
   letter-spacing: 1px;
+  animation: text 2.5s;
 }
 
 .section2 .help .boxes p {
   color: rgb(84, 83, 83);
+  animation: text 2s;
 }
 
 .section2 .help > button {
@@ -227,6 +247,7 @@ main .title button:hover {
   display: flex;
   align-self: center;
   margin-top: 70px;
+  animation: button 4s, button1 4s;
 }
 
 .section2 .help > button:hover {
@@ -235,6 +256,112 @@ main .title button:hover {
 }
 
 /* #endregion section2 */
+
+@keyframes title {
+  0% {
+    margin-top: -100px;
+    opacity: 0;
+    color: blue;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes boxes {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+    color: purple;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes button {
+  from {
+    margin-left: -200px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes button1 {
+  0% {
+    background-color: rgb(189, 238, 243);
+  }
+  10% {
+    background-color: rgb(99, 185, 200);
+  }
+  20% {
+    background-color: rgb(89, 166, 190);
+  }
+  30% {
+    background-color: rgb(78, 145, 208);
+  }
+  40% {
+    background-color: rgb(52, 106, 169);
+  }
+  60% {
+    background-color: rgb(38, 87, 142);
+  }
+  80% {
+    background-color: rgb(18, 27, 64);
+  }
+  100% {
+    background-color: rgb(18, 18, 44);
+  }
+}
+
+@keyframes text {
+  0% {
+    margin-top: -50px;
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes help {
+  from {
+    margin-left: 500px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
 
 @media screen and (max-width: 900px) {
   main .title h1 {
